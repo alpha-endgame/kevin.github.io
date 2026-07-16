@@ -181,6 +181,32 @@
             height: auto;
             display: block;
         }
+        .hero-image-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .hero-caption{
+            margin-top:1.2rem;
+            text-align: center;
+        }
+        
+        .hero-caption h3{
+            font-size:1.2rem;
+            margin-bottom:0.2rem;
+        }
+        
+        .hero-caption p{
+            color:var(--text-primary);
+            font-weight:500;
+            margin-bottom:0.3rem;
+        }
+        
+        .hero-caption span{
+            color:var(--text-secondary);
+            font-size:.9rem;
+        }
 
         /* Education & Skills Split */
         .split-section {
@@ -270,6 +296,28 @@
 
         .project-links a:hover { text-decoration: underline; }
 
+        /* Github statistics */
+        .github-grid{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap:2rem;
+        }
+        
+        .github-grid img{
+            width:100%;
+            border-radius:8px;
+            border:1px solid var(--border);
+        }
+        
+        @media(max-width:768px){
+        
+        .github-grid{
+        grid-template-columns:1fr;
+        }
+        
+        }
+
+        
         /* Footer */
         footer {
             padding: 3rem 0;
@@ -307,14 +355,27 @@
                 <h1>Hey!<br> This is Kevin. </h1>
                 <p>I'm a Computer Engineering student at JKUAT specializing in embedded systems, Cryptography, cyber and Network Security. I write clean code, optimize database queries, and build AI products that solve actual problems.</p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">Download Resume</a> 
+                    <a href="assets/Kevin_Resume.pdf"
+                       class="btn btn-primary"
+                       target="_blank">
+                        View Resume
+                    </a> 
                     <a href="https://github.com/alpha-endgame" target="_blank" class="btn btn-secondary">GitHub Profile</a>
                 </div>
             </div>
             
             <!-- Dynamic Collage Image -->
-            <div class="hero-image">
-                <img src="images/file_000000008f5472438ad2449f50c309f2.png" alt="My Profile Picture.">
+            <div class="hero-image-wrapper">
+                <div class="hero-image">
+                    <img src="images/file_000000008f5472438ad2449f50c309f2.png"
+                         alt="My Profile Photo">
+                </div>
+            
+                <div class="hero-caption">
+                    <h3>Kevin</h3>
+                    <p>Computer Engineering Student</p>
+                    <span>Data Science • Cybersecurity • Networking</span>
+                </div>
             </div>
         </section>
 
@@ -424,6 +485,28 @@
 
     </div>
 
+
+    <!-- Github Statistics Section -->
+    <section id="github">
+    
+        <h2 class="section-title">
+            GitHub Activity
+        </h2>
+    
+        <div class="github-grid">
+    
+            <img
+            src="https://github-readme-stats.vercel.app/api?username=alpha-endgame&show_icons=true&theme=github_dark"
+            alt="GitHub Stats">
+    
+            <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=alpha-endgame&layout=compact&theme=github_dark"
+            alt="Top Languages">
+    
+        </div>
+    
+    </section>
+    
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Kevin. Built from scratch.</p>
